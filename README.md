@@ -1,20 +1,20 @@
 # Bell Pepper Bacterial Spot Classification
 
-Bacterial spot is a serious disease affecting bell peppers, caused by the *Xanthomonas* species of bacteria. It leads to dark, water-soaked lesions on leaves and fruits, reducing yield and marketability. Early detection and classification of infected plants are crucial for effective disease management. 
-
-A Convolutional Neural Network (CNN) model was developed to classify bacterial spot disease in bell peppers using images from the PlantVillage dataset.
+Bacterial spot, caused by Xanthomonas bacteria, is a significant disease affecting bell peppers, leading to dark, water-soaked lesions on leaves and fruits, which reduces yield and marketability. Early detection and classification of infected plants are crucial for effective disease management. This project presents a Convolutional Neural Network (CNN) model developed to classify bacterial spot disease in bell peppers using images from the PlantVillage dataset.
 
 ## Dataset
-The dataset used is the **Bell Pepper Dataset** from PlantVillage. It consists of labeled images of bell pepper leaves, categorized as either healthy or infected with bacterial spot disease.
+The dataset utilized is the **PlantVillage Bell Pepper Dataset**, comprising **2,475 labeled images** of bell pepper leaves categorized as either:
+- **Healthy** (1,478 images)
+- **Infected with bacterial spot disease** (997 images)
+
+These images are standardized to **256x256 pixels**.
+For more details, refer to the [PlantVillage Dataset on Mendeley](https://data.mendeley.com/datasets/tywbtsjrjv/1).
 
 ## Data Splitting
 The dataset is split into:
 - **80% Training**
 - **10% Validation**
 - **10% Testing**
-
-## Preprocessing
-Before training, the dataset undergoes preprocessing to improve performance.
 
 ### Caching, Shuffling, and Prefetching
 To optimize data loading, the dataset is cached, shuffled, and prefetched using TensorFlow’s `AUTOTUNE` feature.
@@ -80,9 +80,6 @@ The model achieved **100% accuracy** on the test dataset.
 
 ## Future Improvements
 - Evaluate performance on a larger and more diverse dataset.
-- Implement transfer learning using pretrained models like VGG16 or ResNet.
+- Implement transfer learning using pretrained models like VGG19 or ResNet.
 - Fine-tune hyperparameters to improve generalization.
-
-## License
-This project is licensed under the MIT License.
 
